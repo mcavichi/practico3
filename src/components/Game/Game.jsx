@@ -74,7 +74,7 @@ const Game = () => {
 
   return (
     <div className="Game">
-        <p>Ingresa tu nombre:</p>
+        <h3>Ingresa tu nombre:</h3>
         <input type="text" value={playerName} onChange={handleNameChange} required />
       <Player onPlayerChoice={handlePlayerChoice} disabled={gameOver} />
       <Computer />

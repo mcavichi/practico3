@@ -1,8 +1,8 @@
-import './Titulo.css'
+import './Title.css'
 
-const Titulo = () => {
+const Title = () => {
     return <h1 className='Titulo'>PIEDRA, PAPEL Y TIJERA!</h1>
 };
     
 
-export default Titulo;
+export default Title;

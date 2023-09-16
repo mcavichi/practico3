@@ -1,14 +1,16 @@
 import './App.css';
-import Titulo from '../src/components/Titulo/Titulo';
+import Title from './components/Title/Title';
 import Game from '../src/components/Game/Game';
-import Reglas from '../src/components/Reglas/Reglas';
+import Rules from './components/Rules/Rules';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <Titulo />
-      <Reglas />
+      <Title />
+      <Rules />
       <Game />
+      <Footer />
     </div>
   );
 }

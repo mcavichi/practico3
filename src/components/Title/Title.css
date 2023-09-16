@@ -1,11 +1,8 @@
 .Titulo {
     background-color: black;
     margin: 0 auto 0 auto;
-    border-color: blueviolet;
-    border-style: double;
     border: 5%;
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
-    
 }

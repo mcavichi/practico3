@@ -1,0 +1,8 @@
+.Game {
+    background-color: whitesmoke;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-color: blueviolet;
+    border-style: double;
+    padding-bottom: 15px;
+}
