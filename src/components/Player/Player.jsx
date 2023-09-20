@@ -8,7 +8,7 @@ import tijera from '../../images/tijera.png';
 const Player = ({ onPlayerChoice }) => {
     return (
         <div>
-            <h3>Elige tu jugada:</h3>
+            <h4>ELIGE TU JUGADA:</h4>
             <button onClick={() => onPlayerChoice('piedra')}>
                 <img className='Images' src={piedra} alt="piedra" />
             </button>

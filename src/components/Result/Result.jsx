@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Result = ({ playerScore, computerScore, round, winner }) => {
+const Result = ({playerScore, computerScore, round, winner }) => {
   return (
     <div>
-      <h4>Resultados</h4>
+      <h4>RESULTADOS</h4>
       <p>Ronda: {round}</p>
-      <p>Tu puntaje: {playerScore}</p>
-      <p>Puntaje de la Computadora: {computerScore}</p>
-      {winner && <p>Resultado de la ronda: {winner}</p>}
+      <p>👤{playerScore} - {computerScore}💻</p>
+      <p></p>
+      {winner && <p>{winner}</p>}
     </div>
   );
 }

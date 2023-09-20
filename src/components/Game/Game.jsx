@@ -38,7 +38,7 @@ const Game = () => {
     ) {
       return `${playerName} gana!`;
     } else if (playerChoice === computerChoice) {
-      return 'Empate!';
+      return 'Empate! 🤝';
     } else {
       return 'La computadora gana!';
     }
@@ -66,19 +66,21 @@ const Game = () => {
     setRound(1);
     setWinner('');
     setGameOver(false);
+    setPlayerName('');
   };
 
   const handleNameChange = (event) => {
     setPlayerName(event.target.value);
   };
 
-  return (
+return (
     <div className="Game">
-        <h3>Ingresa tu nombre:</h3>
-        <input type="text" value={playerName} onChange={handleNameChange} required />
+        <h4>INGRESA TU NOMBRE:</h4>
+        <input type="text" value={playerName} placeholder='Tu nombre' onChange={handleNameChange}/>
       <Player onPlayerChoice={handlePlayerChoice} disabled={gameOver} />
       <Computer />
       <Result
+        playerName={playerName}
         playerScore={playerScore}
         computerScore={computerScore}
         round={round}
@@ -86,12 +88,13 @@ const Game = () => {
       />
       {gameOver && (
         <div>
-          <p>Resultado Final: {winner}</p>
+          <p>Resultado final:  {winner} 🏆🏅🐐</p>
           <button onClick={resetGame}>Reiniciar Juego</button>
         </div>
       )}
     </div>
   );
 };
+  
 
 export default Game;
