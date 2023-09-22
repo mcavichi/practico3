@@ -1,7 +1,13 @@
 .Img {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
 }
+
+.Img:hover{
+    border-radius:50%;
+    transform: rotate(360deg);
+    transition: all 2s;
+    }
 
 .Game {
     background-color: whitesmoke;
@@ -10,4 +16,16 @@
     border-color: blueviolet;
     border-style: double;
     padding-bottom: 15px;
+}
+
+.Button {
+    margin-top: 20px;
+}
+
+.Button:hover {
+    background-color:red;
+    transform: none;
+    transition: 0.3s;
+    color: white;
+
 }

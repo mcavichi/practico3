@@ -1,3 +1,4 @@
+// Importaciones
 import React, { useState } from 'react';
 import Player from '../Player/Player';
 import Computer from '../Computer/Computer';
@@ -6,7 +7,9 @@ import juego from '../../images/juego.png'
 import './Game.css';
 
 
+// Componente Game
 const Game = () => {
+  // Estado del juego
   const [gameStarted, setGameStarted] = useState(false);
   const [playerName, setPlayerName] = useState('');
   const [playerScore, setPlayerScore] = useState(0);
@@ -15,6 +18,7 @@ const Game = () => {
   const [winner, setWinner] = useState('');
   const [gameOver, setGameOver] = useState(false);
 
+  // Función para manejar la elección del jugador
   const handlePlayerChoice = (choice) => {
     if (gameOver) {
       return;
@@ -27,12 +31,14 @@ const Game = () => {
     setWinner(result);
   };
 
+  // Función para generar la elección de la computadora
   const generateComputerChoice = () => {
     const choices = ['piedra', 'papel', 'tijera'];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
   };
 
+  // Función para calcular el ganador de la ronda
   const calculateWinner = (playerChoice, computerChoice) => {
     if (
       (playerChoice === 'piedra' && computerChoice === 'tijera') ||
@@ -47,6 +53,7 @@ const Game = () => {
     }
   };
 
+  // Función para actualizar las puntuaciones
   const updateScores = (result) => {
     if (result === `${playerName} gana!`) {
       setPlayerScore(playerScore + 1);
@@ -63,6 +70,7 @@ const Game = () => {
     }
   };
 
+   // Función para reiniciar el juego
   const resetGame = () => {
     setPlayerScore(0);
     setComputerScore(0);
@@ -73,6 +81,7 @@ const Game = () => {
     setGameStarted(false);
   };
 
+  // Función para manejar el cambio de nombre del jugador
   const handleNameChange = (event) => {
     setPlayerName(event.target.value);
   };
@@ -86,13 +95,15 @@ const Game = () => {
     setGameStarted(true);
   };
 
+  // Renderizado condicional del componente
   if (!gameStarted) {
     return (
       <div>
         <img className="Img" alt='juego' src={juego}></img>
         <h4>INGRESA TU NOMBRE:</h4>
         <input type="text" value={playerName} placeholder='Tu nombre' onChange={handleNameChange}/>
-        <button onClick={handleStartGame}>Iniciar Juego</button>
+        <br/>
+        <button className='Button' onClick={handleStartGame}>Iniciar</button>
       </div>
     );
   }
@@ -111,7 +122,7 @@ const Game = () => {
       {gameOver && (
         <div>
           <p>Resultado final:  {winner} 🏆🏅🐐</p>
-          <button onClick={resetGame}>Reiniciar Juego</button>
+          <button className='Button' onClick={resetGame}>Reiniciar</button>
         </div>
       )}
     </div>

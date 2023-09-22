@@ -1,4 +1,16 @@
-.Images {
+.Option {
     height: 70px;
     width: 70px;
 };
+
+.ButtonOption {
+    border-style: none;
+}
+
+.ButtonOption:hover {
+    scale: 1.1;
+    transition: all 0.25s;
+    filter: saturate(0.8);
+    cursor: pointer;
+    background-color: red;
+}

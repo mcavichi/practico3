@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Result = ({playerScore, computerScore, round, winner }) => {
   return (
     <div>

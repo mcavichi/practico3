@@ -9,14 +9,14 @@ const Player = ({ onPlayerChoice }) => {
     return (
         <div>
             <h4>ELIGE TU JUGADA:</h4>
-            <button onClick={() => onPlayerChoice('piedra')}>
-                <img className='Images' src={piedra} alt="piedra" />
+            <button className='ButtonOption' onClick={() => onPlayerChoice('piedra')}>
+                <img  className='Option' src={piedra} alt="piedra" />
             </button>
-            <button onClick={() => onPlayerChoice('papel')}>
-                <img className='Images' src={papel} alt="papel" />
+            <button className='ButtonOption' onClick={() => onPlayerChoice('papel')}>
+                <img className='Option' src={papel} alt="papel" />
             </button>
-            <button onClick={() => onPlayerChoice('tijera')}>
-                <img className='Images' src={tijera} alt="tijera" />
+            <button className='ButtonOption' onClick={() => onPlayerChoice('tijera')}>
+                <img className='Option' src={tijera} alt="tijera" />
             </button>
         </div>
     );
