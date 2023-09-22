@@ -6,7 +6,6 @@ const Result = ({playerScore, computerScore, round, winner }) => {
       <h4>RESULTADOS</h4>
       <p>Ronda: {round}</p>
       <p>👤{playerScore} - {computerScore}💻</p>
-      <p></p>
       {winner && <p>{winner}</p>}
     </div>
   );

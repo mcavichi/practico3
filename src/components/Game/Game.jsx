@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import Player from '../Player/Player';
 import Computer from '../Computer/Computer';
 import Result from '../Result/Result';
+import juego from '../../images/juego.png'
 import './Game.css';
 
+
 const Game = () => {
+  const [gameStarted, setGameStarted] = useState(false);
   const [playerName, setPlayerName] = useState('');
   const [playerScore, setPlayerScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
@@ -67,16 +70,35 @@ const Game = () => {
     setWinner('');
     setGameOver(false);
     setPlayerName('');
+    setGameStarted(false);
   };
 
   const handleNameChange = (event) => {
     setPlayerName(event.target.value);
   };
 
-return (
-    <div className="Game">
+  const handleStartGame = () => {
+    if (playerName.trim() === '') {
+      alert('Por favor, ingresa tu nombre.');
+      return;
+    }
+
+    setGameStarted(true);
+  };
+
+  if (!gameStarted) {
+    return (
+      <div>
+        <img className="Img" alt='juego' src={juego}></img>
         <h4>INGRESA TU NOMBRE:</h4>
         <input type="text" value={playerName} placeholder='Tu nombre' onChange={handleNameChange}/>
+        <button onClick={handleStartGame}>Iniciar Juego</button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="Game">
       <Player onPlayerChoice={handlePlayerChoice} disabled={gameOver} />
       <Computer />
       <Result
@@ -95,6 +117,5 @@ return (
     </div>
   );
 };
-  
 
 export default Game;

@@ -1,3 +1,8 @@
+.Img {
+    height: 300px;
+    width: 300px;
+}
+
 .Game {
     background-color: whitesmoke;
     margin-left: 50px;

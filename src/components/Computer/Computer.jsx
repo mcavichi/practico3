@@ -5,7 +5,7 @@ import './Computer.css';
 const Computer = () => {
     return (
         <div>
-            <img className='Img' src={computer} alt="computer" />
+            <img className='Img2' src={computer} alt="computer" />
         </div>
     );
 };
